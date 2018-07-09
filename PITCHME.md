@@ -43,7 +43,7 @@ Go合宿行きましたが...
 
 ---
 
-### [/gocarina/gocsv](https://github.com/gocarina/gocsv)
+### [gocarina/gocsv](https://github.com/gocarina/gocsv)
 - jsonパッケージと同じ要領でcsvの内容をstructにマッピングしてくれる
 ```go
 type ClientInfo struct {
@@ -85,7 +85,7 @@ func init() {
 
 ---
 
-### text/templateでテンプレート書き出し
+### text/template
 - テンプレート書き出し用のstructを作って書き出し
 ```go
 	tpl, _ := template.ParseFiles("template.sql")
