@@ -85,7 +85,7 @@ func init() {
 
 ---
 
-### text/htmlでテンプレート書き出し
+### text/templateでテンプレート書き出し
 - テンプレート書き出し用のstructを作って書き出し
 ```go
 	tpl, _ := template.ParseFiles("template.sql")
@@ -112,7 +112,7 @@ set @LoginUserName = '{{$v.MailAddress}}';
 
 ---
 
-### つまりポイント
+### text/templateでのつまりどころ
 - structのメンバ名の頭が大文字じゃないと注入されない  
 - テンプレート記法が微妙に違う!!
 
@@ -129,13 +129,13 @@ for i, v := range clientInfo {
 set @LoginUserName = '{{$v.MailAddress}}';
 {{ end }}
 ```
-@[4](rangeの書き方とか微妙に違う...)
+@[4](rangeの書き方微妙に違う...)
 
 
 ---
 
 ### Python -> Goに書き換えてみた感想
-- structがそのままデータの設計書になるがGodd
+- structがそのままデータの設計書になるのがGood
 - テンプレートエンジンはちょっと微妙
 
 ---
