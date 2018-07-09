@@ -1,11 +1,11 @@
-### Python -> Golangでちょっとしたツールを作り直した
+### Python -> Golangで  
+    ちょっとしたツールを作り直した
 
 ---
 
 ### 自己紹介
 ![アイコン](assets/icon.jpg)
-- @pco2699
-- FintechスタートアップでJava
+- @pco2699 FintechスタートアップでJava
 - Go歴 : 半年ほど
 
 ---
