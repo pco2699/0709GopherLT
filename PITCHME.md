@@ -114,7 +114,23 @@ set @LoginUserName = '{{$v.MailAddress}}';
 
 ### つまりポイント
 - structのメンバ名の頭が大文字じゃないと注入されない  
-- テンプレート記法がまるっと違う!!
+- テンプレート記法が微妙に違う!!
+
+---
+
+### 具体例
+```go
+for i, v := range clientInfo {
+	// do something
+}
+```
+``` sql
+{{ range $i, $v := .ClientInfo }}
+set @LoginUserName = '{{$v.MailAddress}}';
+{{ end }}
+```
+@[1](rangeの書き方とか微妙に違う...)
+
 
 ---
 
