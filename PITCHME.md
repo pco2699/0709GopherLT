@@ -1,5 +1,5 @@
 ### Python -> Golangで  
-ちょっとしたツールを作り直した
+### ちょっとしたツールを作り直した
 
 ---
 
@@ -11,7 +11,7 @@
 ---
 
 ![LTの内容](assets/lt.png)
-https://sway.com/MYj8aUMJv5dJZk1J?ref=Link&loc=play
+https://sway.com/MYj8aUMJv5dJZk1J?ref=Link&loc=play  
 Go合宿行きましたが...
 
 ---
@@ -33,13 +33,13 @@ Go合宿行きましたが...
 ---
 
 ## 作ったツール
-- Pythonで作成
-![図1](assets/diagram1.jpg)
+- Pythonで作成  
+![図1](assets/diagram1.png)
 
 ---
 
 ## Goでの構成
-![図1](assets/diagram2.jpg)
+![図1](assets/diagram2.png)
 
 ---
 
