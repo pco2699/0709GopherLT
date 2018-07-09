@@ -61,7 +61,7 @@ type ClientInfo struct {
 ## gocsvでUnmarshal
 ```go
 	deleteInfos := []*ClientInfo{}
-	if err := gocsv.UnmarshalFile(deleteInfoFile, &deleteInfos); err != nil { // Load clients from file
+	if err := gocsv.UnmarshalFile(deleteInfoFile, &deleteInfos); err != nil {
 		log.Fatal(err)
     }
 ```
@@ -69,8 +69,8 @@ type ClientInfo struct {
 ---
 
 ## Gocsvでのつまりどころ
-Excelでcsvを読み書きするとShiftJISなので、読み込み/書き込みの際のCsvReaderは  
-ShiftJIS用に置き換える
+Excelでcsvを読み書きするとShiftJISなので  
+読み込み/書き込みの際のCsvReaderはShiftJIS用に置き換える
 ```go
 import (
     "golang.org/x/text/encoding/japanese"
@@ -113,7 +113,8 @@ set @LoginUserName = '{{$v.MailAddress}}';
 ---
 
 ## つまりポイント
-- structのメンバ名の頭が大文字じゃないとテンプレートに注入されない -> 公開しているか否かが関係してると思われるが理由は不明
+- structのメンバ名の頭が大文字じゃないとテンプレートに注入されない  
+  -> 公開しているか否かが関係してると思われるが理由は不明
 - テンプレート側の記法がGoからまるっと違うので、頭を切り替える必要
 
 ---
