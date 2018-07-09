@@ -1,4 +1,4 @@
-# Python -> Golangでちょっとしたツールを作り直した
+### Python -> Golangでちょっとしたツールを作り直した
 
 ---
 
@@ -10,7 +10,7 @@
 
 ---
 
-![LTの内容](assets/lt.jpg)
+![LTの内容](assets/lt.png)
 https://sway.com/MYj8aUMJv5dJZk1J?ref=Link&loc=play
 Go合宿行きましたが...
 
