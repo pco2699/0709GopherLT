@@ -32,18 +32,18 @@ Go合宿行きましたが...
 
 ---
 
-## 作ったツール
+### 作ったツール
 - Pythonで作成  
 ![図1](assets/diagram1.png)
 
 ---
 
-## Goでの構成
+### Goでの構成
 ![図1](assets/diagram2.png)
 
 ---
 
-## [/gocarina/gocsv](https://github.com/gocarina/gocsv)
+### [/gocarina/gocsv](https://github.com/gocarina/gocsv)
 - jsonパッケージと同じ要領でcsvの内容をstructにマッピングしてくれる
 ```go
 type ClientInfo struct {
@@ -58,7 +58,7 @@ type ClientInfo struct {
 
 ---
 
-## gocsvでUnmarshal
+### gocsvでUnmarshal
 ```go
 	deleteInfos := []*ClientInfo{}
 	if err := gocsv.UnmarshalFile(deleteInfoFile, &deleteInfos); err != nil {
@@ -68,7 +68,7 @@ type ClientInfo struct {
 
 ---
 
-## Gocsvでのつまりどころ
+### Gocsvでのつまりどころ
 Excelでcsvを読み書きするとShiftJISなので  
 読み込み/書き込みの際のCsvReaderはShiftJIS用に置き換える
 ```go
@@ -85,7 +85,7 @@ func init() {
 
 ---
 
-## text/htmlでテンプレート書き出し
+### text/htmlでテンプレート書き出し
 - テンプレート書き出し用のstructを作って書き出し
 ```go
 	tpl, _ := template.ParseFiles("template.sql")
@@ -99,7 +99,7 @@ func init() {
 
 ---
 
-## テンプレート側
+### テンプレート側
 ```sql
 declare @SOPERATION nvarchar(255) = 'SOPERATION-{{.Number}}'
 ;
@@ -112,13 +112,13 @@ set @LoginUserName = '{{$v.MailAddress}}';
 
 ---
 
-## つまりポイント
+### つまりポイント
 - structのメンバ名の頭が大文字じゃないと注入されない  
 - テンプレート記法がまるっと違う!!
 
 ---
 
-## Python -> Goに書き換えてみた感想
+### Python -> Goに書き換えてみた感想
 - structがそのままデータの設計書になるので読みやすい  
 - たしかにテンプレートエンジンはちょっと微妙
 
