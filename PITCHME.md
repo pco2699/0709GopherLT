@@ -69,8 +69,8 @@ type ClientInfo struct {
 ---
 
 ### Gocsvでのつまりどころ
-Excelでcsvを読み書きするとShiftJISなので  
-読み込み/書き込みの際のCsvReaderはShiftJIS用に置き換える
+csvがShiftJISなので  
+CsvReaderはShiftJIS用に置き換える
 ```go
 import (
     "golang.org/x/text/encoding/japanese"
@@ -129,15 +129,15 @@ for i, v := range clientInfo {
 set @LoginUserName = '{{$v.MailAddress}}';
 {{ end }}
 ```
-@[1](rangeの書き方とか微妙に違う...)
+@[4](rangeの書き方とか微妙に違う...)
 
 
 ---
 
 ### Python -> Goに書き換えてみた感想
-- structがそのままデータの設計書になるので読みやすい  
-- たしかにテンプレートエンジンはちょっと微妙
+- structがそのままデータの設計書になるがGodd
+- テンプレートエンジンはちょっと微妙
 
 ---
 
-# 現場からは以上です
+### 現場からは以上です
